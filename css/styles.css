@@ -38,8 +38,12 @@ body{
 }
 .card{
     background-color: burlywood;
+    font-size: large;
 }
 h4{
     text-align: center;
     font-size: xx-large;
+}
+p{
+    color: darkblue;
 }
