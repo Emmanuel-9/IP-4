@@ -5,12 +5,41 @@
     padding: 30px;
 }
 .tab{
-    background-color: blanchedalmond;
+    background-color: rosybrown;
     padding: 30px;
     font-size: large;
     font-style: italic;
-    color: crimson;
+   color: crimson;
 }
 .row{
     padding: 30px;
+}
+body{
+    font-size: large;
+    
+}
+#small{
+    font-size: xx-large;
+}
+#medium{
+    font-size: xx-large;
+}
+#large{
+    font-size: xx-large;
+}
+small{
+    font-style: italic;
+}
+h1{
+    color: thistle;
+}
+body{
+    background-color: black;
+}
+.card{
+    background-color: burlywood;
+}
+h4{
+    text-align: center;
+    font-size: xx-large;
 }
