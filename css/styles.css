@@ -4,10 +4,6 @@
 #toppings{
     padding: 30px;
 }
-
-.tab{
-    background-color: black;
-}
 .tab{
     background-color: blanchedalmond;
     padding: 30px;
@@ -16,12 +12,5 @@
     color: crimson;
 }
 .row{
-    padding: 30px;
-}
-#ingredients{
-    float: right;
-    size: 100px;
-}
-#crust{
     padding: 30px;
 }
