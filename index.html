@@ -10,8 +10,9 @@
     <body>
       <div class="container">
           <h1>ANTONIO'S PIZZA PLACE</h1>
-            <img src="images/pizza.jpeg">
-            <img src="images/veggie.jpeg">
+            <img src="images/pizza.jpeg">&nbsp;
+            <img src="images/veggie.jpeg">&nbsp;
+            <img src="images/chicken.jpeg">&nbsp;
             <img src="images/cheesy.jpeg"><br><br>
         <div class="card">
             <div class="row">
@@ -19,27 +20,32 @@
                   <div id="drinks">
                       <h2>DRINKS</h2>
                       <ul>
-                          <li>Soda</li>
-                          <li>Juice</li>
-                          <li>Smoothie</li>
-                          <li>Crushers</li>
-                      </ul>
+                          <li>Soda ............. 100/=</li>
+                          <li>Juice ............ 150/=</li>
+                          <li>Smoothie ......... 300/=</li>
+                          <li>Crushers ......... 400/=</li>
+                      </ul><br><br>
+                      <img src="images/juice.jpeg"><br><br>
+                      <img src="images/crushers.jpeg">
                   </div>
               </div>  
                     <div class="col-md-6">
-                       <div id="toppings">
-                          <h3>CREATE A PIZZA</h3> 
-                            <ul>
-                                <li>Bacon</li>
-                                <li>Pineapple</li>
-                                <li>Cheese</li>
-                                <li>Tomatoes</li>
-                                <li>Mushroom</li>
-                                 <li>Boerewors</li>
-                                <li>Beef</li>
-                                <li>Onions</li>
-                            </ul>
-                       </div>
+                      <div class="sidebar">
+                         <img src="images/toppings.jpg" id="topping-image" style="width: 50%;">
+                              <div id="toppings">
+                                <h3>TOPPINGS</h3>
+                                <ul>
+                                  <li>Bacon</li>
+                                  <li>Pineapple</li>
+                                  <li>Cheese</li>
+                                  <li>Tomatoes</li>
+                                  <li>Mushroom</li>
+                                  <li>Boerewors</li>
+                                  <li>Beef</li>
+                                  <li>Onions</li>
+                               </ul>
+                             </div>
+                      </div>
                        <div class ="tab">
                             <div id="pricing">
                                 For any specification of the toppings and crust on your pizza, an additional fee will be paid as follows:
@@ -53,22 +59,23 @@
                     </div>
                     </div>
                 <div class="tab">
+                  <h4>PIZZA PRICES</h4>
                  <div class="row">
-                   <div class="col-md-4"> SMALL <br> 500/= </div>
-                   <div class="col-md-4"> MEDIUM <br> 800/=  </div>
-                   <div class="col-md-4"> LARGE <br> 1200/= </div>
+                   <div class="col-md-4" id="small"> SMALL <br> 500/= </div>
+                   <div class="col-md-4" id="medium"> MEDIUM <br> 800/=  </div>
+                   <div class="col-md-4" id="large"> LARGE <br> 1200/= </div>
                  </div>
               </div> 
                 <div class="content">
                  <div class = "row">
                      <div class="col-md-6">
-                       <p>Hawaiian<br>(Bacon,cheese,pineapple)<br><br> Chicken Periperi<br> (Chicken periperi,onions,cheese,oregano,basil)<br><br>
-                          Pepperoni<br> (Pizza sauce,pepperoni,black olives,cheese)<br><br> Veggie Supreme<br> (Cheese,tomatoes,mushroom,green olives,green pepper)<br><br>
-                          Margherita<br> (Pizza sauce,tomatoes,mozzarella cheese,oregano,basil)<br><br> Sausage and Avo <br> (Pizza sauce,avo,cheese,boerewors,onions)
+                       <p>Hawaiian<br><small>(Bacon,cheese,pineapple)</small><br><br> Chicken Periperi<br><small>(Chicken periperi,onions,cheese,oregano,basil)</small><br><br>
+                          Pepperoni<br><small>(Pizza sauce,pepperoni,black olives,cheese)</small><br><br> Veggie Supreme<br><small>(Cheese,tomatoes,mushroom,green olives,green pepper)</small><br><br>
+                          Margherita<br><small>(Pizza sauce,tomatoes,mozzarella cheese,oregano,basil)</small><br><br> Sausage and Avo <br><small>(Pizza sauce,avo,cheese,boerewors,onions)</small>
                          </p>    
                      </div>  
                       <div class = "col-md-6">
-                         <p>Meat lovers <br> (Pizza sauce,cheese,beef,bacon,boerewors)<br><br> Chicken and mushroom <br> (Pizza sauce,chicken,onion,mushroom,mozzarella)</p>
+                         <p>Meat lovers <br><small>(Pizza sauce,cheese,beef,bacon,boerewors)</small><br><br> Chicken and mushroom <br><small>(Pizza sauce,chicken,onion,mushroom,mozzarella)</small>sma</p>
                            <div class="tab">
                                <div id="offer">TERRIFIC TUESDAY OFFER <br> BUY ONE LARGE GET ONE FREE </div>
                            </div><br>
@@ -77,6 +84,7 @@
                 </div> 
                  <div class="row">
                     <div class="col-md-6"> 
+                      <p> Like what you see? You can place your order online by simply filling the details under the form below:</p>
                         <form id="order">
                             <div class="form-group">
                               <label for="pizza-type">Type of pizza</label>
@@ -102,7 +110,7 @@
                               </div>
                                 <div class="form-group">
                                    <label for="pizza-size">Size of pizza : </label>
-                                    <select class="form-control" id="new-last-name">
+                                    <select class="form-control" id="size">
                                         <option value="small">Small</option>
                                         <option value="medium">Medium</option>
                                         <option value="large">Large</option>
@@ -110,26 +118,35 @@
                                 </div>
                                   <div class="form-group">
                                     <label for="toppings-type">Toppings: </label><br>
-                                      <input type="checkbox" id="top1" name="top1" value="">
+                                      <input type="checkbox" id="top1" name="flavours" value="bacon">
                                         <label for="bacon">Bacon</label>
-                                        <input type="checkbox" id="top2" name="top2" value="">
+                                        <input type="checkbox" id="top2" name="flavours" value="mushroom">
                                         <label for="mushroom">Mushroom</label>
-                                        <input type="checkbox" id="top3" name="top3" value="">
+                                        <input type="checkbox" id="top3" name="flavours" value="onions">
                                         <label for="onions">Onions</label>
-                                        <input type="checkbox" id="top4" name="top4" value="">
+                                        <input type="checkbox" id="top4" name="flavours" value="beef">
                                         <label for="beef">Beef</label>
-                                        <input type="checkbox" id="top5" name="top5" value="">
-                                        <label for="boerewors">Boerewors</label>
-                                        <input type="checkbox" id="top6" name="top6" value="">
-                                        <label for="cheese">Cheese</label><br>
-                                        <input type="checkbox" id="top7" name="top7" value="">
+                                        <input type="checkbox" id="top5" name="flavours" value="boerewors">
+                                        <label for="boerewors">Boerewors</label><br>
+                                        <input type="checkbox" id="top6" name="flavours" value="cheese">
+                                        <label for="cheese">Cheese</label>
+                                        <input type="checkbox" id="top7" name="flavours" value="tomatoes">
                                         <label for="tomatoes">Tomatoes</label>
                                   </div>
                                     <div class="form-group">
                                      <label for="quantity">Number of pizza: </label>
                                      <input type="number" class="form-control" id="quantity" min="1" max="infinity">
                                     </div>
-                        </form>
+                                        <div class="form-group">
+                                        <label for="delivery">Would you want the pizza delivered to you? </label>
+                                        <select class="form-control" id="delivery">
+                                          <option value="accept"> YES</option>
+                                          <option value="reject"> NO</option>
+                                        </select>
+                                    </div>
+                                        <button class="btn-warning btn-lg" type="submit" id="check">Check out</button>&nbsp;&nbsp;&nbsp;
+                                        <button class="btn-success btn-lg" type="submit" id="place">Place order</button>
+                         </form>
                    </div>
                      <div class="col-md-6">
                          <div id = "summary">   </div>
