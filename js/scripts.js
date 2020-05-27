@@ -21,19 +21,24 @@ $(document).ready(function(){
 
         });
         var userChoice = new Pizza(pizzaType,crustType,pizzaSize,quantity,pizzaToppings);
+        if($('select#size').val() == large){
+
+        }
 
         Pizza.prototype.myChoice = function(){
             return "You have chosen " + this.type + this.crust + this.size + pizzaToppings.join(" , ") + this.quantity + "!"
         }
-         $('select#pizza-type').val("");
-         $('select#crust-type').val("");
-         $('select#size').val("");
-         $('input#quantity').val("");
-         $("input[name='flavours']").val("")
+         
 
          $('#check').last().click(function(){
+            
              $('#summary').append(userChoice.myChoice())
+
+             
          });
+         $('#home').click(function(){
+             $('#summary').append('Delivery fee is 300/= regaredless of the location in Nairobi')
+         })
     });
 });
     
