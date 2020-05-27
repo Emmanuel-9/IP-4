@@ -1,47 +1,59 @@
-function Pizza(toppings,size,crust,quantity,type){
-    this.toppings = toppings;
+function Order (type, size, crust, topping) {
+    this.type = type;
     this.size = size;
     this.crust = crust;
-    this.quantity = quantity;
-    this.type = type;
+    this.topping = topping;
 }
+Order.prototype.fullOrder = function () {
+    return this.type + " with the crust of " + this.crust + " and " + this.topping + " as topping.";
+  };
+function Charges(quantity,size,delivery){
+    this.quantity = quantity;
+    this.size = size;
+    this.delivery = delivery;
+}
+Charges.prototype.finalTotal = function () {
+    return this.price * this.quantity + this.delivery;
+  };
+var sizePrice = [1200, 800, 500];
+  var deliverPrices = [0, 200];
+  var additionalFees = [250,  200, 150];
 
-
-$(document).ready(function(){
-    $("form#order").submit(function(event) {
+$(document).ready(function () {
+    $('form#order').submit(function (event) {
         event.preventDefault();
-        var pizzaType= $('select#pizza-type').val();
-        var crustType = $('select#crust-type').val();
-        var pizzaSize = $('select#size').val();
-        var quantity = $('input#quantity').val();
-        var pizzaToppings = [];
-
-        $.each(("input[name='flavours']:checked"), function(){
-            pizzaToppings.push($(this).val());
-
-        });
-        var userChoice = new Pizza(pizzaType,crustType,pizzaSize,quantity,pizzaToppings);
-        if($('select#size').val() == large){
-
+        var pizzaType = $("#pizza-type").val();
+  
+        var pizzaSize = parseInt($('#size').val());
+        var pizzaCrust = $("#crust-type").val();
+  
+        var pizzaTop = $("#toppings-available").val();
+  
+        var pizzaQuantity = parseInt($('#quantity').val());
+  
+        var pizzaPoint = parseInt($('#delivery').val());
+  
+        var price = sizePrice[pizzaSize - 1];
+  
+        var DeliveryCost = deliverPrices[pizzaPoint - 1];
+  
+        newOrder = new Order(pizzaType, pizzaSize, pizzaCrust, pizzaTop);
+        newCharges = new Charges(price, pizzaQuantity, DeliveryCost);
+        if (pizzaPoint == 1){
+        alert("You've ordered: " + newOrder.fullOrder() + ". Continue to see your total bill");
+        alert("Your total bill is: " + newTotal.finalTotal());
+        }else{
+            if(pizzaPoint == 2){
+                prompt("Please enter delivery location");
+                alert("Order recieved. please proceed");
+                alert("You've ordered : " + newOrder.fullOrder() + ". Click okay to see total bill");
+                alert("Your total bills is : " + newCharges.finalTotal());
+            }
         }
-
-        Pizza.prototype.myChoice = function(){
-            return "You have chosen " + this.type + this.crust + this.size + pizzaToppings.join(" , ") + this.quantity + "!"
-        }
-         
-
-         $('#check').last().click(function(){
-            
-             $('#summary').append(userChoice.myChoice())
-
-             
-         });
-         $('#home').click(function(){
-             $('#summary').append('Delivery fee is 300/= regaredless of the location in Nairobi')
-         })
-    });
-});
-    
-        
+    })
+})
+  
+  
+  
            
     
