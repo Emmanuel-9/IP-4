@@ -84,7 +84,8 @@
                 </div> 
                  <div class="row">
                     <div class="col-md-6"> 
-                      <p> Like what you see? You can place your order online by simply filling the details under the form below:</p>
+                      <p> Like what you see? You can place your order online by simply filling the details under the form below:
+                           <strong>DELIVERY FEE IS FIXED REGARDLESS OF THE LOCATION </strong>   </p>
                         <form id="order">
                             <div class="form-group">
                               <label for="pizza-type">Type of pizza</label>
@@ -109,36 +110,37 @@
                                 </select>
                               </div>
                                 <div class="form-group">
-                                   <label for="pizza-size">Size of pizza : </label>
+                                   <label for="pizza-size">Size of pizza: </label>
                                     <select class="form-control" id="size">
-                                        <option value="small">Small</option>
-                                        <option value="medium">Medium</option>
-                                        <option value="large">Large</option>
+                                        <option value="small">Small@500/=</option>
+                                        <option value="medium">Medium@800/=</option>
+                                        <option value="large">Large@1200/=</option>
                                     </select>    
                                 </div>
-                                  <div class="form-group">
-                                    <label for="toppings-type">Toppings: </label><br>
-                                      <input type="checkbox" id="top1" name="flavours" value="bacon">
-                                        <label for="bacon">Bacon</label>
-                                        <input type="checkbox" id="top2" name="flavours" value="mushroom">
-                                        <label for="mushroom">Mushroom</label>
-                                        <input type="checkbox" id="top3" name="flavours" value="onions">
-                                        <label for="onions">Onions</label>
-                                        <input type="checkbox" id="top4" name="flavours" value="beef">
-                                        <label for="beef">Beef</label>
-                                        <input type="checkbox" id="top5" name="flavours" value="boerewors">
-                                        <label for="boerewors">Boerewors</label><br>
-                                        <input type="checkbox" id="top6" name="flavours" value="cheese">
-                                        <label for="cheese">Cheese</label>
-                                        <input type="checkbox" id="top7" name="flavours" value="tomatoes">
-                                        <label for="tomatoes">Tomatoes</label>
-                                  </div>
+                                <div class="form-group">
+                                  <label for="toppings">Available toppings:</label>
+                                  <select class="form-control" id="toppings-available">
+                                    <option value="bacon">Bacon</option>
+                                    <option value="cheese">Cheese</option>
+                                    <option value="boerewors">Boerewors</option>
+                                    <option value="tomatoes">Tomatoes</option>
+                                    <option value="sausage-avo">Mushroom</option>
+                                    <option value="onions">Onions</option>
+                                    <option value="beef">Beef</option>
+                                  </select>
+                                </div>
                                     <div class="form-group">
                                      <label for="quantity">Number of pizza: </label>
                                      <input type="number" class="form-control" id="quantity" min="1" max="infinity">
                                     </div>
+                                      <div class="form-group">
+                                        <label for="delivery">DELIVERY</label>
+                                        <select class="form-control" id="delivery">
+                                          <option value="take-away">Take Away</option>
+                                          <option value="">Have it delivered@200/=</option>
+                                        </select>
+                                      </div>
                                       <button class="btn-warning btn-lg" type="submit" id="check">Check out</button><br><br>
-                                      <button class="btn-success btn-lg" type="submit" id="home">HOME DELIVERY</button>
                         </form>
                    </div>
                      <div class="col-md-6">
