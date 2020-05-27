@@ -4,7 +4,7 @@ function Order (type, size, crust, topping) {
     this.crust = crust;
     this.topping = topping;
 }
-Order.prototype.fullOrder = function () {
+Order.prototype.completeOrder = function () {
     return this.type + " with the crust of " + this.crust + " and " + this.topping + " as topping.";
   };
 function Charges(quantity,size,delivery){
@@ -12,7 +12,7 @@ function Charges(quantity,size,delivery){
     this.size = size;
     this.delivery = delivery;
 }
-Charges.prototype.finalTotal = function () {
+Charges.prototype.Total = function () {
     return this.price * this.quantity + this.delivery;
   };
 var sizePrice = [1200, 800, 500];
@@ -38,16 +38,16 @@ $(document).ready(function () {
         var DeliveryCost = deliverPrices[pizzaPoint - 1];
   
         newOrder = new Order(pizzaType, pizzaSize, pizzaCrust, pizzaTop);
-        newCharges = new Charges(price, pizzaQuantity, DeliveryCost);
+        newCharges = new Charges(price, pizzaQuantity, DeliveryCost,additionalFees);
         if (pizzaPoint == 1){
-        alert("You've ordered: " + newOrder.fullOrder() + ". Continue to see your total bill");
-        alert("Your total bill is: " + newTotal.finalTotal());
+        alert("You've ordered: " + newOrder.completeOrder() + ". Continue to see your total bill");
+        alert("Your total bill is: " + newTotal.Total());
         }else{
             if(pizzaPoint == 2){
                 prompt("Please enter delivery location");
-                alert("Order recieved. please proceed");
-                alert("You've ordered : " + newOrder.fullOrder() + ". Click okay to see total bill");
-                alert("Your total bills is : " + newCharges.finalTotal());
+                alert("Order recieved.");
+                alert("You've ordered : " + newOrder.completeOrder() + ". Click okay to see total bill");
+                alert("Your total charges are : " + newCharges.Total());
             }
         }
     })
